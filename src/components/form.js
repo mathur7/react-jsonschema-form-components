@@ -2,13 +2,14 @@ import Proptypes from 'prop-types';
 import React from 'react';
 import Form from 'react-jsonschema-form';
 
-const FormContainer = (props) => {
+const FormContainer = ({ schema, uiSchema, formData, onSubmit, widgets }) => {
   return (
     <Form 
-      schema={props.schema}
-      uiSchema={props.uiSchema}
-      formData={props.formData} 
-      widgets={props.widgets} />
+      schema={schema}
+      uiSchema={uiSchema}
+      formData={formData} 
+      onSubmit={onSubmit}
+      widgets={widgets} />
   );
 };
 

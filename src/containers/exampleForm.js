@@ -1,32 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FormContainer, Input } from '_components';
+import mockData from '../data/data.js';
 
 const ExampleForm = (props) => {
-  const schema = {
-    title: "Category",
-    type: "object",
-    required: ["title"],
-    properties: {
-      title: {type: "string", title: "Title", default: "Some Value"},
-      description: {type: "string", title: "Description", default: "Some Description"},
-      image: {
-        type: "string", 
-        title: "Select Image", 
-        default: "---", 
-        "enum": [
-          "screen",
-          "multiply",
-          "overlay"
-        ],
-        "enumNames": [
-          "Screen",
-          "Multiply",
-          "Overlay"
-        ]
-      },
-      isRequired: {type: "boolean", title: "Is Required", default: false}
-    }
-  };
+  const [schema, setSchema] = useState({});
+
+  useEffect(() => {
+    //This is where you'd use axios or websockets to grab the schema from the DB
+    setSchema(mockData);
+  }, [schema]);
 
   const widgets = {
     customInput: Input
@@ -44,11 +26,16 @@ const ExampleForm = (props) => {
     }
   };
 
+  function handleSubmit(data) {
+    console.log(data.formData);
+  }
+
   return (
     <FormContainer
       schema={schema}
       uiSchema={uiSchema}
       widgets={widgets}
+      onSubmit={handleSubmit}
     />
   );
 };
