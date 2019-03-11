@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Input } from '_components';
+import { ExampleForm } from '_containers';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Input />
+        <ExampleForm />
       </div>
     );
   }

@@ -1,3 +1,4 @@
+import FormContainer from './form';
 import Input from './input';
 
-export { Input };
+export { FormContainer, Input };
