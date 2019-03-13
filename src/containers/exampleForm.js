@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormContainer, Input } from '_components';
+import { Dropdown, FormContainer, Input } from '_components';
 
 const ExampleForm = (props) => {
   const schema = {
@@ -12,13 +12,18 @@ const ExampleForm = (props) => {
       image: {
         type: "string", 
         title: "Select Image", 
-        default: "---", 
+        default: "Screen", 
         "enum": [
           "screen",
           "multiply",
           "overlay"
         ],
         "enumNames": [
+          "Screen",
+          "Multiply",
+          "Overlay"
+        ],
+        options: [
           "Screen",
           "Multiply",
           "Overlay"
@@ -29,7 +34,8 @@ const ExampleForm = (props) => {
   };
 
   const widgets = {
-    customInput: Input
+    customInput: Input,
+    customDropdown: Dropdown
   };
 
   const uiSchema = {
@@ -38,6 +44,9 @@ const ExampleForm = (props) => {
     },
     description: {
       "ui:widget": "textarea"
+    },
+    image: {
+      "ui:widget": "customDropdown"
     },
     isRequired: {
       "ui:widget": "radio"

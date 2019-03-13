@@ -12,3 +12,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.hide {
+  display: none;
+}
+
+.dropdown-menu {
+  position: relative;
+}
+
+button {
+  padding-right: 20px;
+}
+
+input, button {
+  background: #fff;
+  border: solid 1px #efefef;
+  border-radius: 2px;
+  position: relative;
+  text-align: left;
+  width: 200px;
+}
+
+  /* For autocomplete */
+  > div {
+    width: 200px;
+  }
+
+.dropdown-menu-items {
+  background: #fff;
+  border: solid 1px #efefef;
+  border-radius: 2px;
+  margin-top: -2px;
+  max-height: 200px;
+  overflow: auto;
+  position: absolute;
+  min-width: 200px;
+  z-index: 100;
+}
+
+.dropdown-menu-items > li {
+  cursor: pointer;
+  padding: 5px 10px;
+  list-style-type: none;
+}
+
+.dropdown-menu-items > li:hover {
+  background: $secondary-color-full;
+  color: #fff;
+}
