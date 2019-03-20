@@ -34,10 +34,30 @@ input, button {
   width: 200px;
 }
 
-  /* For autocomplete */
-  > div {
-    width: 200px;
-  }
+.bli-input {
+  width: 414px;
+  height: 47px;
+  border: 1px solid #d8d8d8;
+  border-radius: 3px;
+  font-size: 11px;
+  font-family: Helvetica;
+  color: #757575;
+}
+
+.bli-textarea {
+  width: 414px;
+  height: 95px;
+  border: 1px solid #d8d8d8;
+  border-radius: 3px;
+  font-size: 11px;
+  font-family: Helvetica;
+  color: #757575;
+  resize: none;
+}
+
+> div {
+  width: 200px;
+}
 
 .dropdown-menu-items {
   background: #fff;

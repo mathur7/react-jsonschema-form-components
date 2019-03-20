@@ -8,6 +8,7 @@ const FormContainer = (props) => {
       schema={props.schema}
       uiSchema={props.uiSchema}
       formData={props.formData} 
+      onSubmit={props.onSubmit}
       widgets={props.widgets} />
   );
 };
