@@ -34,12 +34,14 @@ const ExampleForm = (props) => {
 
   if (Object.keys(schema).length > 0) {
     return (
-      <FormContainer
-        schema={schema}
-        uiSchema={getUiSchema(schema)}
-        widgets={widgets}
-        onSubmit={onSubmit}
-      />
+      <div className="example-form-container">
+        <FormContainer
+          schema={schema}
+          uiSchema={getUiSchema(schema)}
+          widgets={widgets}
+          onSubmit={onSubmit}
+        />
+      </div>
     );
   }
 
