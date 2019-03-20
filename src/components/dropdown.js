@@ -14,8 +14,6 @@ class Dropdown extends Component {
     this.handleToggle = this.handleToggle.bind(this);
   }
 
-  // todo: add handling for value if this.props !== nextProps && nextProps === this.state
-  // or other logic to denote optimistic update
   componentWillReceiveProps(nextProps) {
     const {parseDisplayName} = this.props;
     const displayName = parseDisplayName(this.props.value);
@@ -59,11 +57,9 @@ class Dropdown extends Component {
 
   renderOptions() {
     const {options: { enumOptions }} = this.props;
-    console.log(this.props, enumOptions);
     const hide = !this.state.toggleMenu ? ' hide' : '';
     const classes = `dropdown-menu-items${hide}`;
 
-    // TODO: Support passing options as children of this component.
     const dropdownItems = enumOptions.map((option, index) => {
       return (
         <li key={index} onMouseDown={this.handleSelect(option.value)}>{option.label}</li>
