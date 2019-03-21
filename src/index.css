@@ -97,5 +97,5 @@ button {
 
 .dropdown-menu-items > li:hover {
   background: $secondary-color-full;
-  color: blue;
+  color: #2c2c2c;
 }

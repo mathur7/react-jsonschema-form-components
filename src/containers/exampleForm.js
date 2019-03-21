@@ -23,7 +23,11 @@ const ExampleForm = (props) => {
     setSchema(mockData);
   }, [schema]);
 
-  const onSubmit = ({formData}, e) => console.log("Data submitted: ",  formData);
+  const onSubmit = ({formData}, e) => {
+    // api request goes here
+    // updating the global state goes here
+    console.log("Data submitted: ",  formData);
+  };
 
   const widgets = {
     customInput: Input,

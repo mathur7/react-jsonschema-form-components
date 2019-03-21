@@ -6,27 +6,33 @@ export default {
       title: {type: "string", title: "Title", default: "Some title", ui: 'customInput'},
       subtitle: {type: "string", title: "Subtitle", default: "Some subtitle", ui: 'customInput'},
       description: {type: "string", title: "Description", default: "Some Description", ui: 'customTextarea'},
-      image: {
-        type: "string", 
-        title: "Select Image", 
+      file: {
+        type: "string",
+        format: "data-url",
+        title: "Single file"
+      },
+      fruit: {
+        type: "string",
+        title: "Select a fruit",
         ui: 'customDropdown',
-        default: "Screen", 
+        default: "Orange",
         "enum": [
-          "screen",
-          "multiply",
-          "overlay"
+          "orange",
+          "apple",
+          "banana"
         ],
         "enumNames": [
-          "Screen",
-          "Multiply",
-          "Overlay"
+          "Orange",
+          "Apple",
+          "Banana"
         ],
         options: [
-          "Screen",
-          "Multiply",
-          "Overlay"
+          "Orange",
+          "Apple",
+          "Banana"
         ]
       },
+
       isRequired: {type: "boolean", title: "Is Required", default: false, ui: "radio"},
       test: {
         "type": "array",

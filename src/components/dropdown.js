@@ -51,7 +51,7 @@ class Dropdown extends Component {
         value: option.value || option
       });
 
-      this.props.onSelect(option);
+      this.props.onChange(option);
       this.handleCloseMenu();
     };
   }
