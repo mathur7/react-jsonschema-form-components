@@ -19,19 +19,13 @@ code {
 
 .dropdown-menu {
   position: relative;
+  width: 200px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 button {
   padding-right: 20px;
-}
-
-input, button {
-  background: #fff;
-  border: solid 1px #efefef;
-  border-radius: 2px;
-  position: relative;
-  text-align: left;
-  width: 200px;
 }
 
 .bli-input {
@@ -55,8 +49,28 @@ input, button {
   resize: none;
 }
 
-> div {
-  width: 200px;
+.dropdown-menu-selected {
+  background: #fff;
+  border: solid 1px #efefef;
+  border-radius: 2px;
+  position: relative;
+  text-align: left;
+  width: inherit;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: Helvetica;
+  padding: 5px 10px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.down {
+  transform: rotate(-360deg);
+}
+
+.up {
+  transform: rotate(180deg);
 }
 
 .dropdown-menu-items {
@@ -64,20 +78,24 @@ input, button {
   border: solid 1px #efefef;
   border-radius: 2px;
   margin-top: -2px;
-  max-height: 200px;
   overflow: auto;
-  position: absolute;
-  min-width: 200px;
+  width: inherit;
+  box-sizing: border-box;
   z-index: 100;
+  padding: 0;
 }
 
 .dropdown-menu-items > li {
   cursor: pointer;
   padding: 5px 10px;
   list-style-type: none;
+  text-align: left;
+  font-size: 12px;
+  font-family: Helvetica;
+  color: #4a4a4a;
 }
 
 .dropdown-menu-items > li:hover {
   background: $secondary-color-full;
-  color: #fff;
+  color: blue;
 }

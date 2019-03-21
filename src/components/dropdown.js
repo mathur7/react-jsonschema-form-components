@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import triangle from '_assets/images/triangle.svg';
 
 class Dropdown extends Component {
   constructor(props) {
@@ -74,6 +75,7 @@ class Dropdown extends Component {
   }
 
   render() {
+    const triangleClasses = this.state.toggleMenu ? 'up' : 'down';
     return (
       <div className={`dropdown-menu ${this.props.className}`}>
         <button
@@ -81,6 +83,7 @@ class Dropdown extends Component {
           onBlur={this.handleCloseMenu}
           onClick={this.handleToggle}>
           {this.state.displayName}
+          <img className={`triangle ${triangleClasses}`} src={triangle} alt="toggle-icon" />
         </button>
         {this.renderOptions()}
       </div>
