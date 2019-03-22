@@ -3,26 +3,38 @@ import React from 'react';
 
 const Input = (props) => {
   return (
-    <input type="text"
-      className="bli-input"
+    <input 
+      type="text"
+      style={props.style}
       value={props.value}
       required={props.required}
-      onChange={(event) => props.onChange(event.target.value)} />
+      onChange={(event) => props.onChange(event.target.value)} 
+    />
   );
 };
 
 Input.defaultProps = {
   value: '',
-  defaultValue: 'something',
+  defaultValue: '',
   required: false,
-  onChange: () => {}
+  onChange: () => {},
+  style: {
+    width: '414px',
+    height: '47px',
+    border: '1px solid #d8d8d8',
+    borderRadius: '3px',
+    fontSize: '11px',
+    fontFamily: 'Helvetica',
+    color: '#757575'
+  }
 };
 
 Input.propTypes = {
   value: Proptypes.string,
   defaultValue: Proptypes.string,
   required: Proptypes.bool,
-  onChange: Proptypes.func
+  onChange: Proptypes.func,
+  style: Proptypes.object
 };
 
 export default Input;
